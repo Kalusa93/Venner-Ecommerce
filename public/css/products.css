@@ -1,0 +1,233 @@
+* {
+	box-sizing: border-box;
+	margin: 0;
+	padding: 0;
+}
+
+body {
+	font-family: "Mohave", Arial, Helvetica, sans-serif;
+}
+
+/* ESTILOS A LA SECCION DE PRODUCTOS */
+main {
+	width: 90%;
+	margin: 0 auto;
+}
+
+h1 {
+	text-align: center;
+	padding-top: 20px;
+	padding-bottom: 20px;
+}
+
+/* ¡¡¡¡¡¡¡¡¡¡¡ NUEVO DISEÑO !!!!!!!!!!*/
+.products-container {
+	display: flex;
+	justify-content: center;
+}
+
+.home-offers {
+	display: flex;
+	flex-wrap: wrap;
+}
+
+.products {
+	display: flex;
+	flex-wrap: wrap;
+	gap: 25px;
+	max-width: 1280px;
+}
+
+.box-product {
+	width: 45%;
+	max-width: 200px;
+	margin: 20px auto;
+	border-radius: 20px;
+	box-shadow: 0px 0px 10px rgb(100, 100, 100);
+	position: relative;
+	min-width: 150px;
+}
+
+.product-image a {
+	text-decoration: none;
+	color: black;
+	text-align: center;
+}
+
+.product-image{
+	margin-bottom: 5px;
+}
+
+.product-image img {
+	width: 80%;
+	display: block;
+	margin: auto;
+}
+
+.product-image i {
+	position: absolute;
+	top: 15px;
+	right: 15px;
+	font-size: 20px;
+	color: red;
+}
+
+.product-name {
+	vertical-align: middle;
+	padding: 10px 0px;
+	height: 64px;
+	overflow: auto;
+}
+
+.product-name h3 {
+	/* padding: 10px; */
+	font-size: 16px;
+}
+
+.product-details {
+	text-align: center;
+	position: relative;
+	border-top: 1px solid #ebebeb;
+	padding: 20px 10px;
+	min-height: 86px;
+}
+
+.discount {
+	position: absolute;
+	background-color: green;
+	font-family: "Segoe UI";
+	font-size: 14px;
+	color: white;
+	padding: 5px;
+	border-radius: 10px;
+	top: -15px;
+	right: 5px;
+}
+
+.old-price {
+	font-size: 14px;
+	color: rgb(106, 101, 101);
+}
+
+.price {
+	font-size: 18px;
+	font-weight: 600;
+}
+
+.add-to-cart {
+	width: 100%;
+	background-color: #f5debf;
+	color: #5e0d26;
+	cursor: pointer;
+	border: none;
+	border-radius: 0 0 20px 20px;
+	text-align: center;
+	font-size: 18px;
+	font-weight: bolder;
+	padding: 10px 0px;
+}
+
+.heart {
+	transition: all ease 400ms;
+}
+
+.heart:hover {
+	scale: 1.3;
+}
+
+.add-to-cart .fa-cart-shopping {
+	transition: all ease 400ms;
+}
+
+.add-to-cart:hover .fa-cart-shopping {
+	scale: 1.3;
+	rotate: 360deg;
+}
+
+/* ESTILOS AL BOTON PARA AGREGAR UN PRODUCTO NUEVO */
+.add-product {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	background-color: blue;
+	width: 50px;
+	height: 50px;
+	border-radius: 50%;
+	position: fixed;
+	bottom: 20px;
+	right: 20px;
+}
+
+.add-product a {
+	font-size: 36px;
+	text-decoration: none;
+	color: white;
+
+}
+
+/* ESTILOS AL PAGINADO */
+.paginate {	
+	display: flex;
+	text-align: center;
+	justify-content: center;
+	gap: 10px;
+	margin: 10px 0;
+	font-size: 1.25rem;
+	
+}
+.paginate li {
+	list-style: none;
+}
+
+.page-number {
+	border: 1px solid #5e0d26;
+	border-radius: 5px;
+}
+
+.paginate li a {
+    text-decoration: none;
+    font-size: 1.25rem;
+    color: #5e0d26;
+    font-weight: bold;
+    padding: 5px 10px;
+    display: inline-block;
+    text-align: center;
+    min-width: 30px;
+    box-sizing: border-box;
+}
+
+
+/* CONFIGURACION DE ESTILOS PARA TABLETS */
+@media (max-width: 360px) {
+	.box-product {
+		min-width: 50px;
+	}
+}
+
+@media (min-width: 768px) {
+	.box-product {
+		width: 40%;
+	}
+}
+
+/* CONFIGURACION DE ESTILOS PARA DESKTOP */
+@media (min-width: 1024px) {
+	.box-product {
+		max-width: 250px;
+	}
+
+	.box-product:hover {
+		box-shadow: 0px 0px 10px #5e0d26;
+	}
+
+	.add-product {
+		width: 60px;
+		height: 60px;
+		bottom: 30px;
+		right: 30px;
+	}
+	
+	.add-product a {
+		font-size: 60px;	
+	}
+}

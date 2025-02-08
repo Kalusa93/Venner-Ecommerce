@@ -1,0 +1,40 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: Mohave, sans-serif;
+}
+
+/* =============== */
+/* ESTILOS AL MAIN */
+/* =============== */
+main {
+    width: 80%;
+    margin: 0 auto;
+}
+
+.banner {
+    width: 100%;
+
+}
+
+.banner img {
+    width: 100%;
+    padding: 20px 0px;
+}
+.home-offers {
+    overflow-x: scroll;
+    padding: 20px;
+    margin-bottom: 20px;
+}
+
+.products {
+	display: flex;
+    flex-direction: row;
+	flex-wrap: nowrap;
+	gap: 25px;
+    width: max-content;
+}
