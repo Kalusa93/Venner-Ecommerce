@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pagina de pruebas</title>
+</head>
+<body>
+    <h1>PRODUCTOS</h1>
+    <ul>
+        <% products.forEach(product => { %>
+            <li>
+                <h5><%= product.name %> - Precio: $<%= product.price %></h1>
+                <figure>
+                    <img src="/images/products/<%= product.images.name %>"/>
+                </figure>
+                <% if (product.country != undefined) { %>
+                    <p>Pais de origen: <%= product.country.name %></p>
+                <% } %>
+                <% if (product.grapes != undefined) { %>
+                    <p>Uva: <%= product.grapes.name %></p>
+                <% } %>
+                <p>
+                    <%= product.description %>
+                </p>
+                <p>
+                    <%= product.stock %>
+                </p>
+            </li>   
+        <% }) %>
+    </ul>
+</body>
+</html>
